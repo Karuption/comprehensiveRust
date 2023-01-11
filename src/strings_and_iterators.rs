@@ -8,8 +8,8 @@ pub fn prefix_matches(prefix: &str, request_path: &str) -> bool {
     }
 
     prefix
-        .split("/")
-        .zip(request_path.split("/"))
+        .split('/')
+        .zip(request_path.split('/'))
         .all(|x| x.0 == x.1 || x.0 == "*")
 }
 
